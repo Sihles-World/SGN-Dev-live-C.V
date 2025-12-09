@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SGN Dev — Live Neon CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/sgn_logo.png') }}">
+</head>
+<body>
+    <!-- Scroll progress bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Cosmic background layers -->
+    <div class="bg-layer stars"></div>
+    <div class="bg-layer glow"></div>
+    <div class="bg-layer streaks"></div>
+
+    <!-- HEADER / NAV -->
+    <header class="nav">
+        <div class="nav-left">
+            <div class="logo-wrap" id="logo">
+                <img src="{{ url_for('static', filename='img/sgn_logo.png') }}" alt="SGN Dev Logo">
+            </div>
+            <div class="brand">
+                <span class="brand-name">SGN Dev</span>
+                <span class="brand-tagline">Code • Create • Conquer</span>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#timeline" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero section" id="hero">
+        <div class="hero-inner reveal">
+            <div class="hero-text">
+                <p class="hero-sub">Hi, I'm</p>
+                <h1 class="hero-title">Sihlesenkosi Given Ngubane</h1>
+                <h2 class="hero-role">Junior Software Engineer &amp; Creative Developer</h2>
+
+                <p class="hero-typing">
+                    I build <span id="typing-text"></span><span class="cursor">|</span>
+                </p>
+
+                <p class="hero-summary">
+                    A calm, solutions-focused dev who loves turning real-world problems into
+                    beautiful, practical applications — from cleaner management and electricity
+                    estimators to 3D art museums and safety companions.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Connect with Me</a>
+                </div>
+
+                <div class="hero-socials">
+                    <a class="social-pill" href="https://github.com/your-github-username" target="_blank" rel="noopener">
+                        <span class="social-dot"></span>
+                        GitHub
+                    </a>
+                    <a class="social-pill" href="https://www.linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener">
+                        <span class="social-dot"></span>
+                        LinkedIn
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span>📍 Johannesburg, South Africa</span>
+                    <span>📞 081 789 5110 · 081 621 6018</span>
+                    <span>✉️ sihlesenkosingubane@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="hero-card floating-card reveal">
+                <div class="hero-card-inner">
+                    <h3>Snapshot</h3>
+                    <ul>
+                        <li>⚡ Meter auditor by day</li>
+                        <li>🧠 Code &amp; design at night</li>
+                        <li>🎯 Obsessed with practical ideas</li>
+                        <li>🚀 Always learning and shipping</li>
+                    </ul>
+                    <a id="downloadCvBtn"
+                       class="btn btn-small"
+                       href="{{ url_for('static', filename='files/Sihle_SGN_Dev_CV.pdf') }}"
+                       target="_blank"
+                       rel="noopener">
+                        Download PDF CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+        <div class="section-header reveal">
+            <h2>About Me</h2>
+            <p>Calm under pressure, curious by nature, and always looking for the better way to do things.</p>
+        </div>
+
+        <!-- For Recruiters Block -->
+        <div class="recruiter-note card reveal">
+            <h3>For Recruiters</h3>
+            <p class="muted small">
+                This page is designed to give you a quick but detailed view of who I am and how I work.
+                Here’s the fast route:
+            </p>
+            <ul class="recruiter-list">
+                <li><strong>1. Hero &amp; About:</strong> Quick snapshot of my background and working style.</li>
+                <li><strong>2. Skills &amp; Projects:</strong> Scroll down to see what I work with and the tools I build.</li>
+                <li><strong>3. CV &amp; Contact:</strong> Use the <em>Download PDF CV</em> button at the top, or jump to <em>Get in Touch</em> for phone/email.</li>
+            </ul>
+            <p class="muted small">
+                If you’d like to know how I could fit into your team, the best place to start is the
+                <strong>Projects</strong> section and then the <strong>Experience</strong> timeline.
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="card reveal">
+                <h3>Who I Am</h3>
+                <p class="muted">
+                    I’m a junior software engineer and creative developer with a background in
+                    meter auditing, stock control, and technical support. I understand real-world
+                    constraints — time, petrol, people, and stress — and I use code to make that
+                    work smoother.
+                </p>
+                <p class="muted">
+                    I enjoy building tools that someone in a building, a shop, a taxi, or a hospital
+                    can actually use and feel the difference from day one.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <h3>How I Like to Work</h3>
+                <p class="muted">
+                    I listen first, ask questions, and then design something that makes sense for
+                    the people using it. I’m comfortable learning new stacks if it gets us to a
+                    better solution.
+                </p>
+                <div class="pill-row">
+                    <span class="pill">Calm Problem Solver</span>
+                    <span class="pill">Builds for Real People</span>
+                    <span class="pill">Tech-minded &amp; Practical</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+        <div class="section-header reveal">
+            <h2>Skills</h2>
+            <p>Technical foundations backed by real-world experience.</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="card reveal">
+                <h3>Technical Skills</h3>
+
+                <div class="skill-row" title="Used in WattsUp, Cleaner App, Safety Companion concept.">
+                    <span>Python / Flask / Django</span>
+                    <div class="skill-bar" data-level="85">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row" title="Frontend structure and styling for multiple projects.">
+                    <span>HTML / CSS / Bootstrap</span>
+                    <div class="skill-bar" data-level="90">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row" title="Interactive features and dynamic UI behaviours.">
+                    <span>JavaScript</span>
+                    <div class="skill-bar" data-level="75">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row" title="Version control and collaboration.">
+                    <span>Git &amp; GitHub</span>
+                    <div class="skill-bar" data-level="80">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row" title="Basic CRUD apps and data-driven tools.">
+                    <span>SQLite / Basic Databases</span>
+                    <div class="skill-bar" data-level="70">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <h3>Soft Skills</h3>
+                <div class="skill-row">
+                    <span>Problem-solving</span>
+                    <div class="skill-bar" data-level="90">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span>Adaptability</span>
+                    <div class="skill-bar" data-level="88">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span>Communication</span>
+                    <div class="skill-bar" data-level="82">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span>Team collaboration</span>
+                    <div class="skill-bar" data-level="80">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-row">
+                    <span>Attention to detail</span>
+                    <div class="skill-bar" data-level="92">
+                        <div class="skill-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <h3>Tools &amp; Currently Learning</h3>
+                <ul class="tag-list">
+                    <li>VS Code</li>
+                    <li>Git &amp; GitHub</li>
+                    <li>Excel</li>
+                    <li>Word</li>
+                    <li>PowerPoint</li>
+                    <li>Canva</li>
+                    <li>Trello</li>
+                    <li>Notion</li>
+                </ul>
+                <p class="muted small">
+                    Currently exploring: React, Tailwind CSS, and more advanced backend patterns — always levelling up.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+        <div class="section-header reveal">
+            <h2>Projects</h2>
+            <p>Real-world problems, turned into working concepts and apps.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card reveal"
+                     data-title="Cleaner Management App"
+                     data-tag="Utility · Ops"
+                     data-stack="Python · Flask · HTML · CSS"
+                     data-status="Prototype"
+                     data-description="Web app to manage cleaner schedules in an apartment building, track duties, and coordinate communication between tenants and management."
+                     data-role="Designed and built the full prototype based on real building needs.">
+                <div class="project-header">
+                    <h3>Cleaner Management App</h3>
+                    <span class="status-pill">Prototype</span>
+                </div>
+                <p class="muted">
+                    Scheduling, duties, and building communication in one place.
+                </p>
+                <p class="stack">Python · Flask · HTML · CSS</p>
+                <div class="project-tags">
+                    <span>Utility</span><span>Ops</span>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card reveal"
+                     data-title="Electricity Usage Estimator (WattsUp)"
+                     data-tag="Utility"
+                     data-stack="Python · Flask · JavaScript"
+                     data-status="Concept"
+                     data-description="Helps households estimate how long purchased electricity will last based on appliances, usage patterns, and watt consumption."
+                     data-role="Concept, UX, and back-end logic for estimation.">
+                <div class="project-header">
+                    <h3>Electricity Usage Estimator</h3>
+                    <span class="status-pill">Concept</span>
+                </div>
+                <p class="muted">
+                    Turns confusing units into clear time and usage insight.
+                </p>
+                <p class="stack">Python · Flask · JavaScript</p>
+                <div class="project-tags">
+                    <span>Utility</span><span>Finance Awareness</span>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card reveal"
+                     data-title="3D Virtual Art Museum"
+                     data-tag="Creative"
+                     data-stack="HTML · CSS · JavaScript"
+                     data-status="Prototype"
+                     data-description="Online experience where artists can upload work and display it in a virtual museum-like gallery."
+                     data-role="UI design and front-end implementation.">
+                <div class="project-header">
+                    <h3>3D Virtual Art Museum</h3>
+                    <span class="status-pill">Prototype</span>
+                </div>
+                <p class="muted">
+                    A virtual gallery space for visual artists and creators.
+                </p>
+                <p class="stack">HTML · CSS · JavaScript</p>
+                <div class="project-tags">
+                    <span>Creative</span><span>Experiential</span>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card reveal"
+                     data-title="Safety Companion App"
+                     data-tag="Safety"
+                     data-stack="Python · Flask · JavaScript"
+                     data-status="Concept"
+                     data-description="Concept app to help users move safely between places with helpers/accompaniers and route awareness."
+                     data-role="Concept, UX and prototype flow.">
+                <div class="project-header">
+                    <h3>Safety Companion App</h3>
+                    <span class="status-pill">Concept</span>
+                </div>
+                <p class="muted">
+                    Bringing safety, visibility, and support to everyday travel.
+                </p>
+                <p class="stack">Python · Flask · JavaScript</p>
+                <div class="project-tags">
+                    <span>Safety</span><span>Mobility</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-card floating-card">
+            <button class="modal-close" id="modalCloseBtn">✕</button>
+            <p class="modal-tag" id="modalTag"></p>
+            <h3 id="modalTitle"></h3>
+            <p class="modal-stack" id="modalStack"></p>
+            <p id="modalDescription"></p>
+            <p class="muted small"><strong>Your role:</strong> <span id="modalRole"></span></p>
+        </div>
+    </div>
+
+    <!-- TIMELINE / EXPERIENCE SECTION -->
+    <section class="section" id="timeline">
+        <div class="section-header reveal">
+            <h2>Experience</h2>
+            <p>On-the-ground roles that shaped how I think about systems and people.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Meter Reader / Auditor</h3>
+                    <p class="meta">City Power Contractor · Johannesburg · 2023 – Present</p>
+                    <p class="muted">
+                        Plan efficient meter reading routes, interact with residents, solve problems on the spot,
+                        and ensure accurate reporting.
+                    </p>
+                    <p class="muted small">
+                        This taught me: reliability, route optimisation, and how real-world systems succeed or fail.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Technical &amp; Theatre Setup</h3>
+                    <p class="meta">Safesight · 2022 – 2023</p>
+                    <p class="muted">
+                        Assisted with technical setups, AV, and theatre environments — making sure everything
+                        works under time pressure.
+                    </p>
+                    <p class="muted small">
+                        This taught me: attention to detail, timing, and calm troubleshooting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="dot"></div>
+                <div class="content">
+                    <h3>Stock Controller &amp; Retail Support</h3>
+                    <p class="meta">Shoprite · Photo First · 2020 – 2022</p>
+                    <p class="muted">
+                        Managed stock receiving, shelf packing, and assisted with basic IT issues in-store.
+                    </p>
+                    <p class="muted small">
+                        This taught me: discipline, data accuracy, and the value of well-designed systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+        <div class="section-header reveal">
+            <h2>Get in Touch</h2>
+            <p>Open to junior roles, internships, and collaborations.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="card reveal">
+                <h3>Contact Details</h3>
+                <ul class="contact-list">
+                    <li><strong>Phone:</strong> <a href="tel:+27817895110">081 789 5110</a> / <a href="tel:+27816216018">081 621 6018</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:sihlesenkosingubane@gmail.com">sihlesenkosingubane@gmail.com</a></li>
+                    <li><strong>Location:</strong> Johannesburg, South Africa (GMT+2)</li>
+                </ul>
+                <p class="muted">
+                    I’m happy to work remote, hybrid or on-site — as long as we’re building something practical and meaningful.
+                </p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Message</h3>
+                <form class="contact-form" onsubmit="handleFakeSubmit(event)">
+                    <label>
+                        Name
+                        <input type="text" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary full">Send Message</button>
+                    <p class="muted small">
+                        This is a demo form on the live CV. For real opportunities, please email me directly.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <span>© <span id="year"></span> SGN Dev — Code • Create • Conquer.</span>
+        <span class="muted small">Click the logo a few times to unlock Dev Mode.</span>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">Dev mode activated 🔓</div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
